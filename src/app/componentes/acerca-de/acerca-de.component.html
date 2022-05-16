@@ -1,0 +1,26 @@
+<div class="flex ">
+    <div class="inline-flex w-full bg-[#FFFFD8] h-fit justify-center">
+        <div class="container py-16 col-span-3 w-3/4">
+            <h1 *ngIf="lenguaje" class="font-mono font-bold text-4xl text-center my-3">{{datita.titleES}}</h1>
+            <h1 *ngIf="!lenguaje" class="font-mono font-bold text-4xl text-center my-3">{{datita.title}}</h1>
+            <div class="flex justify-between items-end">
+                <div class="font-mono font-bold mx-5">
+                    <div *ngIf="lenguaje">
+                        {{datita.aboutMeEsp}}
+                    </div>
+                    <div *ngIf="!lenguaje">
+                        {{datita.aboutMeIng}}
+                    </div>
+                </div>
+                <button (click)="toggleLenguage()" class=" css-button-retro--blue z-10">Es / En</button>
+                <div class="flex justify-center">
+                    <a href=""><i class="bi bi-pencil-fill mx-2"></i></a>
+                    <a href=""><i class="bi bi-trash3-fill mx-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-botones></app-botones>
+<app-experiencia></app-experiencia>
+<app-skills></app-skills>
