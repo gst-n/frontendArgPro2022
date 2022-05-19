@@ -1,86 +1,25 @@
-<div class="bg-[#FFFFD8] w-full h-full py-10">
+<div class="bg-[#FFFFD8] py-10">
     <div class="">
         <h2 class="w-full block text-center text-4xl font-bold font-mono mb-10">Soft Skills</h2>
-        <div class="flex flex-wrap justify-evenly">
-            <circle-progress class=""
-            [percent]="100"
-            [responsive]="false"
-            [titleFontSize] = "'13'"
-            [showUnits] = false
-            [radius]="80"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#9D94FF'"
-            [innerStrokeColor]="'#ED6031'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'Asertividad'"
-            [showSubtitle]="false"
-            ></circle-progress>
-    
-            <circle-progress class=""
-            [titleFontSize] = "'13'"
-            [percent]="100"
-            [showUnits] = false
-            [radius]="80"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#9D94FF'"
-            [innerStrokeColor]="'#ED6031'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'Perseverancia'"
-            [responsive]="false"
-            [showSubtitle]="false"
-            ></circle-progress>
-    
-            <circle-progress class=""
-            [responsive]="false"
-            [titleFontSize] = "'13'"
-            [percent]="100"
-            [showUnits] = false
-            [radius]="80"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#9D94FF'"
-            [innerStrokeColor]="'#ED6031'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'Comunicación'"
-            [showSubtitle]="false"
-            ></circle-progress>
-            
-            <circle-progress class=""
-            [responsive]="false"
-            [titleFontSize] = "'13'"
-            [percent]="100"
-            [showUnits] = false
-            [radius]="80"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#9D94FF'"
-            [innerStrokeColor]="'#ED6031'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'Puntualidad'"
-            [showSubtitle]="false"
-            ></circle-progress>
+        <div class="flex justify-evenly">
+            <div *ngFor="skill of softSkills" class="">
+                <circle-progress class=""
+                [percent]="100"
+                [responsive]="false"
+                [titleFontSize] = "'13'"
+                [showUnits] = false
+                [radius]="80"
+                [outerStrokeWidth]="12"
+                [innerStrokeWidth]="6"
+                [outerStrokeColor]="'#9D94FF'"
+                [innerStrokeColor]="'#ED6031'"
+                [animation]="true"
+                [animationDuration]="400"
+                [title] = "'Asertividad'"
+                [showSubtitle]="false"
+                ></circle-progress>
 
-            <circle-progress class=""
-            [responsive]="false"
-            [titleFontSize] = "'13'"
-            [percent]="100"
-            [showUnits] = false
-            [radius]="80"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#9D94FF'"
-            [innerStrokeColor]="'#ED6031'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'trabajo en equipo'"
-            [showSubtitle]="false"
-            ></circle-progress>
+            </div>
         </div>
     </div>
     <div class="text-center">
@@ -94,8 +33,8 @@
             [radius]="60"
             [outerStrokeWidth]="12"
             [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#ca50ff'"
-            [innerStrokeColor]="'#85ff50'"
+            [outerStrokeColor]="'#00A876'"
+            [innerStrokeColor]="'#FF5900'"
             [animation]="true"
             [animationDuration]="400"
             [title] = "'Ingles'"
@@ -110,8 +49,8 @@
         [radius]="60"
         [outerStrokeWidth]="12"
         [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
+        [outerStrokeColor]="'#FF5900'"
+        [innerStrokeColor]="'#5C0DAC'"
         [animation]="true"
         [animationDuration]="400"
         [title] = "'HTML5'"

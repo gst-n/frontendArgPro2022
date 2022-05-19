@@ -1,9 +1,9 @@
 <section class="bg-[#FFFFD8] py-10">
     <h1 class="text-center font-bold text-4xl font-mono py-5">Experiencia Laboral</h1>
-    <div class=" grid grid-cols-1 items-center">
-        <div id="contenedor" class="">
-            <div id="tarjetas" *ngFor="let trabajo of experiencia" class="bg-[#9D94FF] w-full h-fit rounded-xl border-2 shadow-md mx-5 my-5 py-5 px-2">
-                <div class="flex justify-between p-10 bg-[#ED6031] border-2 w-full rounded-lg">
+    <div class=" ">
+        <div id="contenedor" class="flex flex-row justify-center flex-wrap items-center">
+            <div id="tarjetas" *ngFor="let trabajo of experiencia" class="bg-[#9D94FF] w-2/5 h-fit rounded-xl border-2 shadow-md mx-5 my-5 py-5 px-2">
+                <div class="flex justify-between p-10 bg-[#CEEFC1] border-2 min-h-full rounded-lg">
                     <div class="font-mono mx-3" id="contenido_tarjeta">
                         <span class=" block w-full text-2xl">{{trabajo.empresa}}</span>
                         <span class="block w-full text-base font-extralight">Lugar: {{trabajo.localizacion}} </span>

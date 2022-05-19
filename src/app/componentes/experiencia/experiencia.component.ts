@@ -28,13 +28,6 @@ export class ExperienciaComponent implements OnInit {
       anioInicio: 2012,
       anioFin: 2015,
       ocupacion: 'Administrador de deposito'  
-    },
-    {
-      empresa: 'Secretaria de Turismo',
-      localizacion:'Puerto Madryn - Chubut',
-      anioInicio: 2012,
-      anioFin: 2015,
-      ocupacion: 'Administrador de deposito'  
     }
   ];
 
