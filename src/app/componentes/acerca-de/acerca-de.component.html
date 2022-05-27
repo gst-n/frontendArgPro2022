@@ -3,7 +3,7 @@
         <div class="container py-16 col-span-3 w-3/4">
             <h1 *ngIf="lenguaje" class="font-mono font-bold text-4xl text-center my-3">{{datita.titleES}}</h1>
             <h1 *ngIf="!lenguaje" class="font-mono font-bold text-4xl text-center my-3">{{datita.title}}</h1>
-            <div class="flex justify-between items-end">
+            <div class="flex justify-center items-center">
                 <div class="font-mono font-bold mx-5">
                     <div *ngIf="lenguaje">
                         {{datita.aboutMeEsp}}
@@ -24,3 +24,5 @@
 <app-botones></app-botones>
 <app-experiencia></app-experiencia>
 <app-skills></app-skills>
+<app-proyectos></app-proyectos>
+<app-footer></app-footer>

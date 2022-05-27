@@ -1,160 +1,46 @@
 <div class="bg-[#FFFFD8] py-10">
-    <div class="">
-        <h2 class="w-full block text-center text-4xl font-bold font-mono mb-10">Soft Skills</h2>
-        <div class="flex justify-evenly">
-            <div *ngFor="skill of softSkills" class="">
-                <circle-progress class=""
-                [percent]="100"
-                [responsive]="false"
-                [titleFontSize] = "'13'"
-                [showUnits] = false
-                [radius]="80"
-                [outerStrokeWidth]="12"
-                [innerStrokeWidth]="6"
-                [outerStrokeColor]="'#9D94FF'"
-                [innerStrokeColor]="'#ED6031'"
-                [animation]="true"
-                [animationDuration]="400"
-                [title] = "'Asertividad'"
-                [showSubtitle]="false"
-                ></circle-progress>
-
+    <h1 class="text-center font-mono font-bold text-4xl mb-10">Skills</h1>
+    <div  class=" grid grid-cols-2 place-items-center mb-10">
+        <div class="animate__animated animate__fadeInLeft p-6 w-2/4 bg-[#CEEFC1] rounded-lg border-2 border-black">
+            <div *ngFor="let skill of softSk" class="w-full">
+                <span class="font-mono font-bold py-2">{{skill}}</span>
+                <div class="flex justify-between mb-1 text-center">
+                    <span class="text-base font-medium"></span>
+                    <span class="text-sm font-medium"></span>
+                  </div>
+                  <div class="w-full bg-black rounded-full h-3.5">
+                    <div class="bg-[#ED6031] h-3.5 rounded-full" style="width: 100%"></div>
+                  </div>
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <h2 class="w-full block text-center text-4xl font-bold font-mono mt-16 mb-10">Hard Skills</h2>
-        <div class="flex flex-wrap justify-evenly">
-            <circle-progress class=""
-            [responsive]="false"
-            [titleFontSize] = "'13'"
-            [percent]="85"
-            [showUnits] = false
-            [radius]="60"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="6"
-            [outerStrokeColor]="'#00A876'"
-            [innerStrokeColor]="'#FF5900'"
-            [animation]="true"
-            [animationDuration]="400"
-            [title] = "'Ingles'"
-            [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="90"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#FF5900'"
-        [innerStrokeColor]="'#5C0DAC'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'HTML5'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="90"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'CSS'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="65"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'JavaScript'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="65"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'Typescript'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="70"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'Angular 13'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="60"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'Bootstrap 5'"
-        [showSubtitle]="false"
-        ></circle-progress>
-
-        <circle-progress class=""
-        [responsive]="false"
-        [titleFontSize] = "'13'"
-        [percent]="55"
-        [showUnits] = false
-        [radius]="60"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="6"
-        [outerStrokeColor]="'#ca50ff'"
-        [innerStrokeColor]="'#85ff50'"
-        [animation]="true"
-        [animationDuration]="400"
-        [title] = "'Tailwind CSS'"
-        [showSubtitle]="false"
-        ></circle-progress>
+        <div class="animate__animated animate__fadeInRight p-6 max-w-sm bg-[#53AC9A] rounded-lg border-2 border-black">
+            <h5 class="mb-2 text-2xl font-mono font-bold tracking-tight text-center">Soft Skills</h5>
+            <p class="mb-3 font-normal font-mono"> La experiencia de trabajar en diferentes rubros a lo largo de mi vida, me ha capacitado en las siguientes habilidades blandas. </p>
         </div>
+    </div>
 
-        
+    <div class="text-center">
 
+        <div class="grid grid-cols-2 place-items-center">
+
+            <div class="animate__animated animate__fadeInRight p-6 max-w-sm bg-[#53AC9A] rounded-lg border border-black">
+                <h5 class="mb-2 text-2xl font-mono font-bold tracking-tight">Tecnologias Manejadas</h5>
+                <p class="mb-3 font-normal font-mono ">Aqui, algunas de las tecnologias que empleo a diario para crear </p>
+            </div>
+            
+            <div class="animate__animated animate__fadeInLeft p-6 max-w-sm bg-[#CEEFC1] rounded-lg border-2 border-black">
+                <ol *ngFor="let hardSkill of hardSk" class="grid grid-cols-2 justify-items-center">
+                    <!-- flex flex-row row-span-full -->
+                    <div class="">
+                        <ul class="text-left font-mono font-bold block w-full my-2 mx-10">{{hardSkill.nombre}}</ul>
+                    </div>
+                    <div class="">
+                        <img class="block w-fit text-center" src="{{hardSkill.icon}}" alt="icon">
+                    </div>
+                </ol>
+                <!-- <h5 class="mb-2 text-2xl font-bold tracking-tight">Tecnologias Manejadas</h5>
+                <p class="mb-3 font-normal ">Aqui, algunas de las tecnologias que empleo a diario para crear </p> -->
+            </div>
+        </div>
     </div>
 </div>

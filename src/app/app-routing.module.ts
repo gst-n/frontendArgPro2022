@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404Component } from './componentes/error404/error404.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: '**', 
     component: Error404Component
+  },
+  {
+    path: 'footer', 
+    component: FooterComponent
   }
 ];
 

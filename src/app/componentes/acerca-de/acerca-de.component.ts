@@ -34,7 +34,6 @@ export class AcercaDeComponent implements OnInit {
     this.personalData.getData()
     .subscribe( (data)=>{
       this.datita = data;
-      console.table(this.datita)
     }
 
     )

@@ -6,34 +6,83 @@
     "profileImage" : "",
     "aboutMeEsp" : "Mi nombre es Gastón, tengo 29 años y actualmente me encuentro trabajando y estudiando en Puerto Madryn - Chubut. Mis intereses generales son las nuevas(y no tan nuevas) tecnologias, la fotografia, la musica, y los viajes. Si quieres conocer mas sobre mi y mi forma de trabajo, te invito a que me dejes un mensaje por alguna de mis redes sociales.",
     "aboutMeIng" : "Hello stranger!, my name is Gastón, i'm 29 yo and i'm actually living in Puerto Madryn - Chubut. My main interests are new technologies, photography, music, and traveling. If you want to have a chat, i invited you to leave me a message on my social media.",
-    "experienciaLaboral" : [{
-        "empresa": "Rosario Hogar",
-        "localizacion": "'Puerto Madryn - Chubut'",
-        "anioInicio": "2012",
-        "anioFin": "2015",
-        "ocupacion": "'Administrador de deposito'"  
-    },
-    {
-        "empresa": "Secretaria de Turismo",
-        "localizacion":"Puerto Madryn - Chubut",
-        "anioInicio": "2012",
-        "anioFin": "2015",
-        "ocupacion": "'Administrador de deposito'"  
-    },
-    {
-        "empresa": "Secretaria de Turismo",
-        "localizacion":"Puerto Madryn - Chubut",
-        "anioInicio": "2012",
-        "anioFin": "2015",
-        "ocupacion": "'Administrador de deposito'"  
-    },
-    {
-        "empresa": "Secretaria de Turismo",
-        "localizacion":"Puerto Madryn - Chubut",
-        "anioInicio": "2012",
-        "anioFin": "2015",
-        "ocupacion": "'Administrador de deposito'"  
-    }],
-    "softSkills" : ["Asertividad", "Empatia", "Comunicación", "Perseverancia"],
-    "hardSkills" : ["HTML5", "CSS", "JavaScript", "Typescript", "Angular 13", "TailwindCSS", "SQL", "Bootstrap", "Ingles"]    
+    "experienciaLaboral" : [
+            {
+                "empresa": "Rosario Hogar",
+                "localizacion": "'Puerto Madryn - Chubut'",
+                "anioInicio": "2012",
+                "anioFin": "2015",
+                "ocupacion": "'Administrador de deposito'"  
+            },
+            {
+                "empresa": "Secretaria de Turismo",
+                "localizacion":"Puerto Madryn - Chubut",
+                "anioInicio": "2012",
+                "anioFin": "2015",
+                "ocupacion": "'Administrador de deposito'"  
+            },
+            {
+                "empresa": "Secretaria de Turismo",
+                "localizacion":"Puerto Madryn - Chubut",
+                "anioInicio": "2012",
+                "anioFin": "2015",
+                "ocupacion": "'Administrador de deposito'"  
+            }],
+
+    "softSkills" : [
+            "Asertividad",
+            "Empatia",
+            "Comunicación",
+            "Perseverancia",
+            "Trabajo en equipo"
+        ],
+
+    "hardSkills" : [
+        {
+            "nombre": "HTML5",
+            "porcentaje": 70,
+            "icon" : "../../../assets/iconosTech/icons8-html-5.svg"
+        },
+
+        {  "nombre": "CSS",
+            "porcentaje": 70,
+            "icon" : "../../../assets/iconosTech/icons8-css-64.png"
+        },
+
+        {
+            "nombre" : "JavaScript",
+            "porcentaje": 60,
+            "icon" : "../../../assets/iconosTech/icons8-javascript.svg"
+        },
+
+        {
+            "nombre" : "Typescript",
+            "porcentaje" : 60,
+            "icon" : "../../../assets/iconosTech/icons8-typescript.svg"
+        },
+
+        {
+            "nombre": "Angular 13",
+            "porcentaje" : 60,
+            "icon" : "../../../assets/iconosTech/icons8-angularjs.svg"
+        },
+
+        {
+            "nombre": "SQL",
+            "porcentaje" : 40,
+            "icon" : "../../../assets/iconosTech/icons8-sql-50.png"
+        },
+
+        {
+            "nombre": "Bootstrap",
+            "porcentaje": 60,
+            "icon" : "../../../assets/iconosTech/bootstrap-fill.png"
+        },
+
+        {
+            "nombre":"Ingles",
+            "porcentaje": 70,
+            "icon" : "../../../assets/iconosTech/icons8-traductor-google.svg"
+        }
+    ]
 }
