@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonalDataService } from 'src/app/servicios/personal-data.service';
+import { IProgress } from './IProgress';
 
 @Component({
   selector: 'app-skills',
@@ -8,7 +9,9 @@ import { PersonalDataService } from 'src/app/servicios/personal-data.service';
 })
 export class SkillsComponent implements OnInit {
 
-  softSkills = ["Asertividad", "Perseverancia", "Comunicación", "Trabajo en equipo"];
+  mostrarSkills:boolean = false;
+  habilidadesDuras:string[] = ["HTML", "CSS", "JavaScript", "TypeScript", "Bootstrap", "GIT", "Tailwind CSS", "Angular", "SQL", "Ingles"];
+  
   hardSk:any = [];
   softSk:any = [];
 
@@ -23,6 +26,10 @@ export class SkillsComponent implements OnInit {
     this.data.getData().subscribe((data:any)=> {
       this.softSk = data.softSkills
     })
+  }
+
+  showSkill(){
+    this.mostrarSkills = !this.mostrarSkills;
   }
 
 

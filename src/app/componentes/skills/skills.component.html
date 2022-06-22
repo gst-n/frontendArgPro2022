@@ -1,45 +1,63 @@
-<div class="bg-[#FFFFD8] py-10">
-    <h1 class="text-center font-mono font-bold text-4xl mb-10">Skills</h1>
-    <div  class=" grid grid-cols-2 place-items-center mb-10">
-        <div class="animate__animated animate__fadeInLeft p-6 w-2/4 bg-[#CEEFC1] rounded-lg border-2 border-black">
-            <div *ngFor="let skill of softSk" class="w-full">
-                <span class="font-mono font-bold py-2">{{skill}}</span>
-                <div class="flex justify-between mb-1 text-center">
-                    <span class="text-base font-medium"></span>
-                    <span class="text-sm font-medium"></span>
-                  </div>
-                  <div class="w-full bg-black rounded-full h-3.5">
-                    <div class="bg-[#ED6031] h-3.5 rounded-full" style="width: 100%"></div>
-                  </div>
-            </div>
-        </div>
-        <div class="animate__animated animate__fadeInRight p-6 max-w-sm bg-[#53AC9A] rounded-lg border-2 border-black">
-            <h5 class="mb-2 text-2xl font-mono font-bold tracking-tight text-center">Soft Skills</h5>
+<div class="bg-[#FFFFD8] py-10 flex justify-center">
+    <div class="border-2 border-black w-4/5 shadow-2xl p-5 rounded-md">
+        <h1 class="text-center font-mono font-bold text-4xl mb-10 my-10">Habilidades blandas</h1>
+        
+        <div class=" mx-auto mb-10 animate__animated animate__fadeInRight p-6 max-w-md bg-[#53AC9A] rounded-lg border-2 border-black">
             <p class="mb-3 font-normal font-mono"> La experiencia de trabajar en diferentes rubros a lo largo de mi vida, me ha capacitado en las siguientes habilidades blandas. </p>
         </div>
+        <!-- HABILIDADES BLANDAS -->
+        <div class="flex justify-between">
+            <circle-progress *ngFor="let skill of softSk" class="w-full"
+            [backgroundColor]="'#CEEFC1'"
+            [percent]= "100"
+            [radius]="70"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="0"
+            [outerStrokeColor]="'#53AC9A'"
+            [animation]="true"
+            [animationDuration]="300"
+            [showUnits]="false"
+            [title] = "skill"
+            [showSubtitle] = "false"
+            [titleFontSize] = "'15'">
+        </circle-progress>  
+        
     </div>
-
+    
+    
+    <hr class="my-10 text-black"> 
     <div class="text-center">
-
-        <div class="grid grid-cols-2 place-items-center">
-
-            <div class="animate__animated animate__fadeInRight p-6 max-w-sm bg-[#53AC9A] rounded-lg border border-black">
-                <h5 class="mb-2 text-2xl font-mono font-bold tracking-tight">Tecnologias Manejadas</h5>
-                <p class="mb-3 font-normal font-mono ">Aqui, algunas de las tecnologias que empleo a diario para crear </p>
-            </div>
-            
-            <div class="animate__animated animate__fadeInLeft p-6 max-w-sm bg-[#CEEFC1] rounded-lg border-2 border-black">
-                <ol *ngFor="let hardSkill of hardSk" class="grid grid-cols-2 justify-items-center">
-                    <!-- flex flex-row row-span-full -->
-                    <div class="">
-                        <ul class="text-left font-mono font-bold block w-full my-2 mx-10">{{hardSkill.nombre}}</ul>
-                    </div>
-                    <div class="">
-                        <img class="block w-fit text-center" src="{{hardSkill.icon}}" alt="icon">
-                    </div>
-                </ol>
-                <!-- <h5 class="mb-2 text-2xl font-bold tracking-tight">Tecnologias Manejadas</h5>
-                <p class="mb-3 font-normal ">Aqui, algunas de las tecnologias que empleo a diario para crear </p> -->
+        <!-- HABILIDADES DURAS -->
+        <h5 class="text-center font-mono font-bold text-4xl mb-10 my-10">Habilidades Tecnicas</h5>
+        
+        <div class="animate__animated animate__fadeInRight p-6 max-w-md mx-auto mb-10 bg-[#53AC9A] rounded-lg border border-black">
+            <p (onClick)="showSkill()" class="mb-3 font-normal font-mono">Aqui, algunas de las tecnologias que he aprendido en los ultimos años </p>
+            <ol *ngIf="mostrarSkills">
+                <li *ngFor="let habilidad of habilidadesDuras">
+                    {{habilidad}}
+                </li>
+            </ol>
+        </div>
+            <div class="flex flex-wrap justify-around">
+                <circle-progress (onClick)="showSkill()" *ngFor="let skill of hardSk" class=""
+                [backgroundColor]="'#CEEFC1'"
+                [percent]= "skill.porcentaje"
+                [radius]="70"
+                [outerStrokeWidth]="8"
+                [innerStrokeWidth]="0"
+                [outerStrokeColor]="'#53AC9A'"
+                [animation]="true"
+                [animationDuration]="500"
+                [showUnits]="false"
+                [showSubtitle]="true"
+                [subtitle] = "skill.nombre"
+                [subtitleFontSize]="'30'"
+                [showImage]="true"
+                [imageSrc] = "skill.icon"
+                [imageHeight]= "40"
+                [imageWidth]= "40">
+                <h5>{{skill.nombre}}</h5>
+            </circle-progress>  
             </div>
         </div>
     </div>

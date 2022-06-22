@@ -1,17 +1,17 @@
-<section class="bg-[#FFFFD8] py-10">
-    <div class="flex justify-center">
-        <h1 class="animate__animated animate__slideInUp my-auto text-center font-bold text-4xl font-mono py-5">Experiencia Laboral</h1>
-        <div class="animate__animated animate__slideInLeft container w-2/4 rounded-lg text-center">
-            <ol  *ngFor="let trabajo of experiencia" class="flex justify-center ">                  
-                <li class="mb-10 ml-4 list-disc bg-[#53AC9A] rounded-lg p-4 border-2 border-black">
+<section class="bg-[#FFFFD8] py-10 flex justify-center">
+    <div class="flex rounded-lg p-10 border-2 border-black w-4/5 shadow-2xl">
+        <h1 class="mr-10 col-span-1 animate__animated animate__slideInUp my-auto text-center font-bold text-4xl font-mono py-5">Experiencia Laboral</h1>
+        <div class="animate__animated animate__slideInLeft container w-2/4 rounded-lg text-center col-span-1">
+            <li  *ngFor="let trabajo of experiencia" class="list-none">                  
+                <div class="mb-10 ml-4 list-none bg-[#CEEFC1] rounded-lg p-4 border-2 border-black">
                     <h1 class="font-mono text-xl">{{trabajo.empresa}}</h1>
                     <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border"></div>
                     <time class="font-mono mb-1 text-sm font-normal leading-none">{{trabajo.anioInicio}} - {{trabajo.anioFin}}</time>
                     <h3 class="font-mono text-lg font-semibold">{{trabajo.ocupacion}}</h3>
                     <p class="font-mono mb-4 text-base font-normal">{{trabajo.localizacion}}</p>
-                </li>
+                </div>
                 
-            </ol>
+            </li>
         </div>
     </div>
 
