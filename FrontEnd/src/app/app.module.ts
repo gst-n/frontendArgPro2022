@@ -20,6 +20,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { EditExperienciaComponent } from './componentes/experiencia/experiencia/edit-experiencia/edit-experiencia.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EditExperienciaComponent } from './componentes/experiencia/experiencia/
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     FontAwesomeModule,
     NgCircleProgressModule.forRoot({})
   ],
