@@ -1,0 +1,41 @@
+<div class="flex w-full justify-between items-center bg-[#9D94FF] rounded-md bg-opacity-50 ">
+    <div class="flex-col items-center">
+      <div class="flex-col items-center my-1 mx-3 justify-center">
+          <a routerLink="/"><h1 class="text-2xl font-mono mx-auto px-1">Rosales Gastón</h1></a>
+            <small class="font-mono text-lg mx-auto">Argentina Programa 2022 
+                <fa-icon class="mx-auto" [icon]="terminal"></fa-icon>
+            </small>
+        </div>
+    </div>
+
+    
+    <div class="inline-flex justify-end w-1/4">
+            <ul class="navigation block sm:flex md:flex  mx-1 px-4">
+                <li class="nav-item mx-3 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/">Inicio</a>
+                
+                </li>
+                <li class="nav-item mx-1 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/experiencia">Experiencia</a>
+
+                </li>
+                <li class="nav-item mx-1 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/proyectos">Proyetos</a>
+
+                </li>
+                <li class="nav-item mx-1 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/contacto">Contacto</a>
+                </li>
+                <li class="nav-item mx-1 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/skills">Habilidades</a>
+
+                </li>
+                <li class="nav-item mx-1 flex justify-center font-mono hover:translate-x-1 border-2 rounded-md px-1 border-black">
+                  <a routerLink="/login" data-bs-toggle="modal" data-bs-target=""
+                    >Login</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+<router-outlet></router-outlet>
