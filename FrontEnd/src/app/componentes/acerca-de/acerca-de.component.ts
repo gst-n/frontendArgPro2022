@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalDataService } from 'src/app/servicios/personal-data.service';
+import { Persona } from 'src/app/Models/persona.model';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,38 +9,21 @@ import { PersonalDataService } from 'src/app/servicios/personal-data.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  // acercaDe:any = [
-  //   {
-  //     acercaMio: ` Mi nombre es Gastón, tengo 29 años y actualmente me encuentro trabajando y 
-  //     estudiando en Puerto Madryn - Chubut. Mis intereses generales son las nuevas(y no tan nuevas) tecnologias, 
-  //     la fotografia, la musica, y los viajes.
-  //     Si quieres conocer mas sobre mi y mi forma de trabajo, te invito a que me dejes un mensaje por alguna de mis redes sociales.
-  //     `
-  //   },
-  //   {
-  //     aboutMe: ` Hello stranger!, my name is Gastón, i'm 29 years old and i'm actually living in Puerto Madryn - Chubut. 
-  //     My main interests are new technologies, photography, music, and traveling.
-  //     If you want to have a chat, i invited you to leave me a message on my social media.`
-  //   }
-  // ];
+  persona:Persona = new Persona("","","");
 
-
-  constructor(private personalData:PersonalDataService) { }
+  constructor(public personaService:PersonaService) { }
   
-  datita:any = "";
-  lenguaje:boolean = true;
-
-
+  
+  
   ngOnInit(): void {
-    this.personalData.getData()
-    .subscribe( (data)=>{
-      this.datita = data;
-    }
-
-    )
+    this.personaService.getPersona().subscribe(data=> {
+      this.persona = data
+      console.log(this.persona);
+    })
   }
-
-
+  
+  //modificacion del lenguaje en el template html Acerca De
+  lenguaje:boolean = true;
   toggleLenguage():void {
     this.lenguaje = !this.lenguaje;
   }

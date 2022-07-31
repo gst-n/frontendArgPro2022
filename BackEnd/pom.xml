@@ -51,6 +51,29 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-security</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>io.jsonwebtoken</groupId>
+                    <artifactId>jjwt</artifactId>
+                    <version>0.9.1</version>
+                </dependency>
+	 <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-context</artifactId>
+	  <version>5.3.22</version>
+	  <type>jar</type>
+	 </dependency>
+         
+	 <dependency>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-core</artifactId>
+	  <version>5.7.2</version>
+	  <type>jar</type>
+	 </dependency>
+         
 	</dependencies>
 
 	<build>

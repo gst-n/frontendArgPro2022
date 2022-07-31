@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalDataService } from 'src/app/servicios/personal-data.service';
 
 @Component({
   selector: 'app-skills',
@@ -16,17 +15,10 @@ export class SkillsComponent implements OnInit {
   hardSk:any = [];
   softSk:any = [];
 
-  constructor(private data:PersonalDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
 
-    this.data.getData().subscribe((data:any) => {
-      this.hardSk = data.hardSkills
-    })
-
-    this.data.getData().subscribe((data:any)=> {
-      this.softSk = data.softSkills
-    })
   }
 
   showSkill(){
