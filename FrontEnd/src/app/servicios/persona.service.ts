@@ -13,6 +13,6 @@ export class PersonaService {
   constructor(private http:HttpClient) { }
 
   public getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(this.URL + 'traer/perfil');
+    return this.http.get<Persona>(this.URL + `traer/`);
   }
 }

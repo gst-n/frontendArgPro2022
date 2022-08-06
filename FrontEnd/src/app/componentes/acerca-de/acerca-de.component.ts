@@ -9,23 +9,20 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  persona:Persona = new Persona("","","");
+  perfil:any = new Persona("","","","")
+  
+  constructor(public personaService:PersonaService) { 
+  }
 
-  constructor(public personaService:PersonaService) { }
-  
-  
   
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data=> {
-      this.persona = data
-      console.log(this.persona);
+    this.personaService.getPersona().subscribe(data => {
+      this.perfil = data;
     })
-  }
-  
-  //modificacion del lenguaje en el template html Acerca De
-  lenguaje:boolean = true;
-  toggleLenguage():void {
-    this.lenguaje = !this.lenguaje;
+
+    //no actualiza la variable perfil !?!?!?!
+    console.log("No actualiza la variable perfil en AcercaDeComponent.ts")
   }
 
+  
 }

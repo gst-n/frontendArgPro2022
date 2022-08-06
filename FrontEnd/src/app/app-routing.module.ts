@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { Error404Component } from './componentes/error404/error404.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
     component: ExperienciaComponent
   },
   {
+    path: 'editExperiencia/:id', 
+    component: EditExperienciaComponent
+  },
+  {
     path: 'skills', 
     component: SkillsComponent
   },
@@ -42,7 +47,7 @@ const routes: Routes = [
   {
     path: '**', 
     component: Error404Component
-  },
+  }
 ];
 
 @NgModule({

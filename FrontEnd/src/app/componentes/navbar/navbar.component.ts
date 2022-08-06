@@ -16,12 +16,10 @@ export class NavbarComponent implements OnInit {
   loginIco = faRightToBracket;
   terminalIco = faTerminal;
 
-  persona:Persona = new Persona("", "", "");
+  persona:Persona = new Persona("", "", "","");
 
   constructor(public personaService:PersonaService, private tokenService:TokenService) { }
 
-  // this.personaService.getPersona().subscribe(data => {
-  // this.persona = data
   ngOnInit(): void {
 
     if(this.tokenService.getToken()){
