@@ -22,6 +22,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { NuevaExperienciaComponent } from './componentes/experiencia/nueva-experiencia.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
     FooterComponent,
     ContactoComponent,
     NuevaExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EducacionComponent
   ],
   imports: [
     BrowserModule,

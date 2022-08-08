@@ -26,7 +26,6 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
 
     this.nuevaExperiencia();
-    //no actualiza la variable global "experiencia!?!"
 
     if(this.tokenService.getToken()){
       this.isLogged = true;
@@ -37,11 +36,16 @@ export class ExperienciaComponent implements OnInit {
     
   }
   nuevaExperiencia():void {
-    this.sExperienciaService.lista().subscribe(data => 
-      {
-        this.expe= data;
+    this.sExperienciaService.lista().subscribe({
+      next: (data:Experiencia[]) => {
+        this.expe = data;
+      },
+      error: (err => {
+        console.error("Algo salio mal");
       })
-    }
+    })
+  
+  }
 
 
   toggleExperienciaButton():void{
@@ -50,13 +54,15 @@ export class ExperienciaComponent implements OnInit {
 
   delete(id?: number){
     if(id != undefined){
-      this.sExperienciaService.delete(id).subscribe(
+      if(confirm("¿Desea eliminar esta experiencia laboral?"))
+      {
+        this.sExperienciaService.delete(id).subscribe(
         data => {
           this.nuevaExperiencia();
         }, err => {
           alert("No se pudo borrar la experiencia");
         }
-      )
+      )}
     }
   }
 

@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<section class="bg-[#FFFFD8] py-5 flex justify-center">
+    <div class="sm:flex rounded-lg p-10 border-2 border-black w-4/5 shadow-2xl">
+        <div class="animate__animated animate__slideInLeft container sm:w-2/4 rounded-lg text-center col-span-1">
+            <li  *ngFor="let trabajo of educacion" class="list-none">                  
+                <div class="mb-5 ml-2 bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
+                    <div *ngIf="isLogged" class="flex justify-end px-2">
+                        
+                        <button ><fa-icon class="text-left" [icon]="deleteIcon">Eliminar</fa-icon></button>
+                        <button><fa-icon routerLink="" class="mx-2" [icon]="editIcon">Editar</fa-icon></button>
+                    </div>
+                    <h1 class="font-mono text-xl">nombre educacion</h1>
+                    <p class="font-mono mb-4 text-base">descripcion educacion</p>
+                </div>
+            </li>
+            
+            <!-- componente de edicion experiencia persona -->
+            <button *ngIf="isLogged" >
+                class="h-12 items-center nav-item mx-1
+                flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF]
+              transition border-2 rounded-md px-1 border-black mt-1">Agregar nueva Experiencia Laboral</button>
+              <div *ngIf="isLogged"  class="my-10">
+                <app-nueva-experiencia></app-nueva-experiencia>
+            </div>
+        </div>
+        <h1 class="mr-10 col-span-1 animate__animated animate__slideInUp my-auto text-right flex justify-end text-4xl font-mono py-5">Educacion</h1>
+    </div>
+</section>
+
+<app-footer></app-footer>

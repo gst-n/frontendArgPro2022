@@ -1,7 +1,7 @@
 module.exports = {
-  darkMode: 'class',
   content: [
-    "./src/**/*.{html,ts}"
+    // "./src/**/*.{html,ts}"
+    "C:/Users/gasto/Desktop/Proyects/portfolio-web/FrontEnd/src/**/*.{html,ts}",
   ],
   theme: {
     extend: {},

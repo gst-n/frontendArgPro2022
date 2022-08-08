@@ -1,12 +1,12 @@
 <div class="mb-5 list-none bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
     <form class="justify-center" (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
+        <div class="">
             <label class="font-mono" for="nombreE">Nombre</label>
-            <input class="my-1 mx-5 border border-black rounded-md" type="text" name="nombreE" id="nombreE" required [(ngModel)]="nombreE">
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="nombreE" id="nombreE" required [(ngModel)]="nombreE">
         </div>
         <div>
             <label class="font-mono" for="descripcionE">Descripcion</label>
-            <input class="my-1 mx-5 border border-black rounded-md" type="text" name="descripcionE" id="descripcionE" required [(ngModel)]="descripcionE">
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="descripcionExp" id="descripcionExp" required [(ngModel)]="descripcionExp">
         </div>
         <button class="p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">Agregar experiencia</button>
     </form>

@@ -9,20 +9,22 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  perfil:any = new Persona("","","","")
+  perfil:Persona = new Persona("","","","")
   
-  constructor(public personaService:PersonaService) { 
+  constructor(public personaService:PersonaService) { }
+
+  
+    ngOnInit(): void {
+      this.personaService.getPersona().subscribe({
+         next: (data:Persona) => 
+         {
+          this.perfil = data;
+          console.log(this.perfil)
+         },
+        error: (error => 
+          {
+          console.error("Algo salio mal en el componente Acerca-de")
+          })
+        })
+      }
   }
-
-  
-  ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {
-      this.perfil = data;
-    })
-
-    //no actualiza la variable perfil !?!?!?!
-    console.log("No actualiza la variable perfil en AcercaDeComponent.ts")
-  }
-
-  
-}

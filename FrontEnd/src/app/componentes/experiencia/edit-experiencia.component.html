@@ -1,13 +1,19 @@
-<div *ngIf="expLab" class="w-2/4 flex justify-center mx-auto mb-5 list-none bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
-    <form class="justify-center" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-            <label class="font-mono" for="nombreE">Nombre</label>
-            <input class="my-1 mx-5 border border-black rounded-md" type="text" name="nombreE" id="nombreE" required [(ngModel)]="expLab.nombreE">
-        </div>
-        <div>
-            <label class="font-mono" for="descripcionE">Descripcion</label>
-            <input class="my-1 mx-5 border border-black rounded-md" type="text" name="descripcionE" id="descripcionE" required [(ngModel)]="expLab.descripcionE">
-        </div>
-        <button class="p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">Actualizar</button>
-    </form>
+<app-navbar></app-navbar>
+<div class="w-full h-screen flex justify-center items-center bg-[#FFFFD8]">
+    <h2 class="text-3xl text-center font-mono block w-2/5">Editar experiencia laboral</h2>
+    <div *ngIf="expLab" class="mx-20 my-10 w-3/4 flex justify-center mb-5 list-none bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
+        <form class="text-center w-3/4" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="mt-5">
+                <label class="font-mono text-center " for="nombreE">Nombre</label>
+                <input class="block w-full my-3 border border-black rounded-md" type="text" name="nombreE" id="nombreE" required [(ngModel)]="expLab.nombreE">
+            </div>
+            <div>
+                <label class="font-mono text-center" for="descripcionExp">Descripcion</label>
+                <textarea [(ngModel)]="expLab.descripcionExp" required class="block w-full my-3 border border-black rounded-md" type="textarea" name="descripcionExp" id="descripcionExp"></textarea>
+            </div>
+            <button class="p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1 mb-5">Actualizar</button>
+        </form>
 </div>
+</div>
+
+<app-footer></app-footer>
