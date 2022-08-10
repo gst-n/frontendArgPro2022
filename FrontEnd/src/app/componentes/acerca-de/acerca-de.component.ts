@@ -20,11 +20,7 @@ export class AcercaDeComponent implements OnInit {
          {
           this.perfil = data;
           console.log(this.perfil)
-         },
-        error: (error => 
-          {
-          console.error("Algo salio mal en el componente Acerca-de")
-          })
+         }
         })
       }
   }

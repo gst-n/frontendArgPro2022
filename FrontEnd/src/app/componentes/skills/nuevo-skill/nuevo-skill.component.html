@@ -1,0 +1,17 @@
+<div class="mb-5 list-none sm:w-2/4 mt-10 flex-col justify-center mx-auto bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
+    <form class="justify-center" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="">
+            <label class="font-mono" for="nombre">Nombre</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="nombre" id="nombre" required [(ngModel)]="nombre">
+        </div>
+        <div>
+            <label class="font-mono" for="tipo">Tipo de habilidad</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="tipo" id="tipo" required [(ngModel)]="tipo">
+        </div>
+        <div>
+            <label class="font-mono" for="porcentajeh">Porcentaje aprendido</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="porcentajeh" id="porcentajeh" required [(ngModel)]="porcentajeH">
+        </div>
+        <button class="p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">Agregar habilidad</button>
+    </form>
+</div>

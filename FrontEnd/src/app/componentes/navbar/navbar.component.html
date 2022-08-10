@@ -11,7 +11,7 @@
     
     <div class="inline-flex justify-end w-1/4">
             <ul class="navigation block md:flex  mx-1 px-4 my-1">
-                <li class="h-12 w-20 nav-item mx-3 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
+                <li class="h-12 w-20 nav-item mx-3 flex justify-center items-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
                   <a routerLink="/">Inicio</a>
                 
                 </li>
@@ -20,19 +20,17 @@
 
                 </li>
                 <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
+                  <a routerLink="/skills">Habilidades</a>
+                </li>
+                <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
+                  <a routerLink="/educacion">Educacion</a>
+                </li>
+                <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
                   <a routerLink="/proyectos">Proyetos</a>
 
                 </li>
                 <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
                   <a routerLink="/contacto">Contacto</a>
-                </li>
-                <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
-                  <a routerLink="/skills">Habilidades</a>
-
-                </li>
-                <li class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
-                  <a routerLink="/educacion">Educacion</a>
-
                 </li>
                 <li *ngIf="!isLogged">
                   <button routerLink="/login" class="h-12 items-center nav-item mx-1 flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">

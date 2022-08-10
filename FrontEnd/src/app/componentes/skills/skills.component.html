@@ -1,15 +1,15 @@
 <app-navbar></app-navbar>
-<div class="bg-[#FFFFD8] py-10 flex justify-center">
-    <div class="border-2 border-black w-4/5 shadow-2xl p-5 rounded-md">
-        <h1 class="text-center font-mono text-4xl mb-10 my-10">Habilidades blandas</h1>
+<div class="bg-[#FFFFD8] mt-10 text-center">
+    <div class="border-2 border-black w-4/5 mx-auto mb-10 h-2/4 shadow-2xl p-5 rounded-md">
+        <h1 class="text-center font-mono text-4xl mb-10 my-10">Habilidades</h1>
         <div class=" mx-auto mb-10 animate__animated animate__fadeInRight p-6 max-w-md bg-[#53AC9A] rounded-lg border-2 border-black">
-            <p class="mb-3 font-normal font-mono"> La experiencia de trabajar en diferentes rubros a lo largo de mi vida, me ha capacitado en las siguientes habilidades blandas. </p>
+            <p class="mb-3 font-normal font-mono"> La experiencia de trabajar en diferentes rubros a lo largo de mi vida, me ha capacitado en las siguientes habilidades blandas. Ademas he de mostrar a continuacion algunas de las tecnologias que he aprendido en los ultimos años </p>
         </div>
-        <!-- HABILIDADES BLANDAS -->
+        <!-- HABILIDADES -->
         <div class="sm:flex justify-between">
-            <circle-progress *ngFor="let skill of softSk" class="w-full"
+            <circle-progress *ngFor="let skill of listaHabilidades" class="w-full"
             [backgroundColor]="'#CEEFC1'"
-            [percent]= "100"
+            [percent]= "skill.porcentajeH"
             [radius]="60"
             [outerStrokeWidth]="8"
             [innerStrokeWidth]="0"
@@ -17,31 +17,40 @@
             [animation]="true"
             [animationDuration]="300"
             [showUnits]="false"
-            [title] = "skill"
-            [showSubtitle] = "false"
+            [title] = "skill.nombre"
+            [showSubtitle] = "true"
+            [subtitle]="skill.tipo"
             [titleFontSize] = "'15'">
-        </circle-progress>  
-        
+            <h1>{{skill.nombre}}</h1>
+            </circle-progress>
+        </div>
     </div>
+    <button (click)="toggleCreateSkill()" *ngIf="isLogged" class="mt-10 mb-10 p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black" >Agregar habilidad</button>
+    <div *ngIf="toggleSkill">
+        <app-nuevo-skill></app-nuevo-skill>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+          <!-- HABILIDADES DURAS -->
     
-    
-    <hr class="my-10 text-black"> 
+    <!-- <hr class="my-10 text-black"> 
     <div class="text-center">
-        <!-- HABILIDADES DURAS -->
         <h5 class="text-center font-mono text-4xl mb-10 my-10">Habilidades Tecnicas</h5>
         
         <div class="animate__animated animate__fadeInRight p-6 max-w-md mx-auto mb-10 bg-[#53AC9A] rounded-lg border border-black">
-            <p (onClick)="showSkill()" class="mb-3 font-normal font-mono">Aqui, algunas de las tecnologias que he aprendido en los ultimos años </p>
-            <ol *ngIf="mostrarSkills">
-                <li  *ngFor="let habilidad of habilidadesDuras">
-                    {{habilidad}}
+            <p class="mb-3 font-normal font-mono">Aqui, algunas de las tecnologias que he aprendido en los ultimos años </p>
+            <ol *ngIf="isLogged">
+                <li  *ngFor="let habilidad of listaHabilidades">
+                    {{habilidad.nombre}}
                 </li>
             </ol>
         </div>
             <div class="flex flex-wrap justify-around">
-                <circle-progress (onClick)="showSkill()" *ngFor="let skill of hardSk" class=""
+                <circle-progress *ngFor="let skill of listaHabilidades" class=""
                 [backgroundColor]="'#CEEFC1'"
-                [percent]= "skill.porcentaje"
+                [percent]= "skill.porcentajeH"
                 [radius]="60"
                 [outerStrokeWidth]="8"
                 [innerStrokeWidth]="0"
@@ -52,15 +61,11 @@
                 [showSubtitle]="true"
                 [subtitle] = "skill.nombre"
                 [subtitleFontSize]="'30'"
-                [showImage]="true"
-                [imageSrc] = "skill.icon"
+                [showImage]="false"
                 [imageHeight]= "40"
                 [imageWidth]= "40">
                 <h5>{{skill.nombre}}</h5>
             </circle-progress>  
             </div>
         </div>
-    </div>
-</div>
-
-<app-footer></app-footer>
+    </div> -->
