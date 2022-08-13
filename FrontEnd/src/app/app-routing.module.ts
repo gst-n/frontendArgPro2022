@@ -14,6 +14,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { EditSkillComponent } from './componentes/skills/edit-skill/edit-skill.component';
 import { NuevoSkillComponent } from './componentes/skills/nuevo-skill/nuevo-skill.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
+import { GuardSeguridadGuard } from './guard-seguridad.guard';
 
 const routes: Routes = [
   {
@@ -31,7 +32,8 @@ const routes: Routes = [
   },
   {
     path: 'editExperiencia/:id', 
-    component: EditExperienciaComponent
+    component: EditExperienciaComponent,
+    canActivate: [GuardSeguridadGuard]
   },
   {
     path: 'educacion', 
@@ -39,7 +41,8 @@ const routes: Routes = [
   },
   {
     path: 'editEducacion/:id', 
-    component: EditEducacionComponent
+    component: EditEducacionComponent,
+    canActivate: [GuardSeguridadGuard]
   },
   {
     path: 'skills', 
@@ -51,7 +54,8 @@ const routes: Routes = [
   },
   {
     path: 'editSkill/:id',
-    component: EditSkillComponent
+    component: EditSkillComponent,
+    canActivate: [GuardSeguridadGuard]
   },
   {
     path: 'nuevaeducacion', 

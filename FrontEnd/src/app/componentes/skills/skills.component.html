@@ -11,7 +11,7 @@
                 <button (click)="borrar(skill.id)" ><fa-icon class="" [icon]="deleteIcon">Eliminar</fa-icon></button>
                 <button><fa-icon routerLink="/editSkill/{{skill.id}}" class="mx-2" [icon]="editIcon">Editar</fa-icon></button>
             </div>
-            <circle-progress  class=""
+            <circle-progress 
             [backgroundColor]="'#CEEFC1'"
             [percent]= "skill.porcentajeH"
             [radius]="60"

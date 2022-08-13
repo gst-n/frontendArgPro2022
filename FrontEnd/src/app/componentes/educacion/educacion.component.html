@@ -3,7 +3,7 @@
 <section class="bg-[#FFFFD8] py-5 flex justify-center">
     <div class="sm:flex justify-between rounded-lg p-10 border-2 border-black w-4/5 shadow-2xl">
         <div class="animate__animated animate__slideInLeft container sm:w-2/4 rounded-lg text-center col-span-1">
-            <li  *ngFor="let edu of educacion" class="list-none">                  
+            <li  *ngFor="let edu of educacion" class="list-none hover:bg-[#CEC9FF] hover:rounded-lg p-1 hover:transition">                  
                 <div class="mb-5 ml-2 bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
                     <div *ngIf="isLogged" class="flex px-2 w-2/4">
                         <button (click)="borrar(edu.id)" ><fa-icon class="text-left" [icon]="deleteIcon">Eliminar</fa-icon></button>
