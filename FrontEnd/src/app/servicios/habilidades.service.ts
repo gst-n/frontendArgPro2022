@@ -21,7 +21,7 @@ export class HabilidadesService {
     return this.http.get<Habilidad>(this.URL + `detail/${id}`);
   }
 
-  public save(habilidad:Habilidad):Observable<any>{
+  public save(habilidad:Habilidad):Observable<Habilidad>{
     return this.http.post<Habilidad>(this.URL + `create`, habilidad);
   }
 
@@ -30,7 +30,7 @@ export class HabilidadesService {
   }
 
   public delete(id:number):Observable<any>{
-    return this.http.delete<any>(this.URL + `/delete${id}`);
+    return this.http.delete<any>(this.URL + `delete/${id}`);
   }
 }
 

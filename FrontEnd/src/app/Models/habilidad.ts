@@ -5,9 +5,9 @@ export class Habilidad {
     porcentajeH:number
 
 
-    constructor(nombre:string, tipo:string, porcentajeh:number){
+    constructor(nombre:string, tipo:string, porcentaje:number){
         this.nombre = nombre;
         this.tipo = tipo;
-        this.porcentajeH = porcentajeh;
+        this.porcentajeH = porcentaje;
     }
 }

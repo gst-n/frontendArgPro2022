@@ -6,8 +6,12 @@
             <p class="mb-3 font-normal font-mono"> La experiencia de trabajar en diferentes rubros a lo largo de mi vida, me ha capacitado en las siguientes habilidades blandas. Ademas he de mostrar a continuacion algunas de las tecnologias que he aprendido en los ultimos años </p>
         </div>
         <!-- HABILIDADES -->
-        <div class="sm:flex justify-between">
-            <circle-progress *ngFor="let skill of listaHabilidades" class="w-full"
+        <div *ngFor="let skill of listaHabilidades" class="sm:inline-flex justify-start mx-5 hover:border-2 hover:border-[#53AC9A] hover:rounded-full p-1 hover:transition m-3">
+            <div *ngIf="isLogged" class="flex px-2">
+                <button (click)="borrar(skill.id)" ><fa-icon class="" [icon]="deleteIcon">Eliminar</fa-icon></button>
+                <button><fa-icon routerLink="/editSkill/{{skill.id}}" class="mx-2" [icon]="editIcon">Editar</fa-icon></button>
+            </div>
+            <circle-progress  class=""
             [backgroundColor]="'#CEEFC1'"
             [percent]= "skill.porcentajeH"
             [radius]="60"
@@ -21,51 +25,13 @@
             [showSubtitle] = "true"
             [subtitle]="skill.tipo"
             [titleFontSize] = "'15'">
-            <h1>{{skill.nombre}}</h1>
             </circle-progress>
+            
         </div>
     </div>
-    <button (click)="toggleCreateSkill()" *ngIf="isLogged" class="mt-10 mb-10 p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black" >Agregar habilidad</button>
+    <button (click)="toggleCreateSkill()" *ngIf="isLogged" class="mt-3 mb-5 p-2 items-center nav-item mx-1 font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black" >Agregar habilidad</button>
     <div *ngIf="toggleSkill">
         <app-nuevo-skill></app-nuevo-skill>
     </div>
 </div>
 <app-footer></app-footer>
-
-
-          <!-- HABILIDADES DURAS -->
-    
-    <!-- <hr class="my-10 text-black"> 
-    <div class="text-center">
-        <h5 class="text-center font-mono text-4xl mb-10 my-10">Habilidades Tecnicas</h5>
-        
-        <div class="animate__animated animate__fadeInRight p-6 max-w-md mx-auto mb-10 bg-[#53AC9A] rounded-lg border border-black">
-            <p class="mb-3 font-normal font-mono">Aqui, algunas de las tecnologias que he aprendido en los ultimos años </p>
-            <ol *ngIf="isLogged">
-                <li  *ngFor="let habilidad of listaHabilidades">
-                    {{habilidad.nombre}}
-                </li>
-            </ol>
-        </div>
-            <div class="flex flex-wrap justify-around">
-                <circle-progress *ngFor="let skill of listaHabilidades" class=""
-                [backgroundColor]="'#CEEFC1'"
-                [percent]= "skill.porcentajeH"
-                [radius]="60"
-                [outerStrokeWidth]="8"
-                [innerStrokeWidth]="0"
-                [outerStrokeColor]="'#9D94FF'"
-                [animation]="true"
-                [animationDuration]="500"
-                [showUnits]="false"
-                [showSubtitle]="true"
-                [subtitle] = "skill.nombre"
-                [subtitleFontSize]="'30'"
-                [showImage]="false"
-                [imageHeight]= "40"
-                [imageWidth]= "40">
-                <h5>{{skill.nombre}}</h5>
-            </circle-progress>  
-            </div>
-        </div>
-    </div> -->

@@ -11,6 +11,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { EditSkillComponent } from './componentes/skills/edit-skill/edit-skill.component';
 import { NuevoSkillComponent } from './componentes/skills/nuevo-skill/nuevo-skill.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'nuevoSkill',
     component: NuevoSkillComponent
+  },
+  {
+    path: 'editSkill/:id',
+    component: EditSkillComponent
   },
   {
     path: 'nuevaeducacion', 

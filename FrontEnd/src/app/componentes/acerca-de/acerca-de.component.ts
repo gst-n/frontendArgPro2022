@@ -15,11 +15,10 @@ export class AcercaDeComponent implements OnInit {
 
   
     ngOnInit(): void {
-      this.personaService.getPersona().subscribe({
+      this.personaService.getPersona(2).subscribe({
          next: (data:Persona) => 
          {
           this.perfil = data;
-          console.log(this.perfil)
          }
         })
       }

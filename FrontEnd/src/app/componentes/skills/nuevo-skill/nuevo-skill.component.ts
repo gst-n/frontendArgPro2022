@@ -13,7 +13,7 @@ export class NuevoSkillComponent implements OnInit {
 
   nombre:string = '';
   tipo:string = '';
-  porcentajeH:number = null;
+  porcentajeH:number = 0;
 
   constructor(private habilidadService:HabilidadesService, private router:Router) { }
 
@@ -24,12 +24,16 @@ export class NuevoSkillComponent implements OnInit {
 
     const nuevaHabilidad = new Habilidad(this.nombre,this.tipo,this.porcentajeH);
 
-    this.habilidadService.save(nuevaHabilidad).subscribe(data=>{
-      alert('habilidad añadida');
-      this.router.navigate(['']);      
-    },err => {
-      alert('Algo salio mal');
-      this.router.navigate(['']);
+    this.habilidadService.save(nuevaHabilidad).subscribe({
+        next: data=>{
+        alert('habilidad añadida');
+        this.router.navigate(['']);      
+      },
+        error: err => {
+        alert('Algo salio mal');
+        this.router.navigate(['']);
+      }
     })
   }
 }
+
