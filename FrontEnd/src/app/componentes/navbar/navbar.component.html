@@ -1,4 +1,4 @@
-<div class="flex w-full justify-between items-center bg-[#9D94FF] rounded-md bg-opacity-50 md:col-span-3">
+<!-- <div class="flex w-full justify-between items-center bg-[#9D94FF] rounded-md bg-opacity-50 md:col-span-3">
     <div class="flex-col items-center">
       <div class="flex-col items-center my-1 mx-3 justify-center">
           <a routerLink="/"><h1 class="text-2xl font-mono mx-auto px-1">Gaston Rosales</h1></a>
@@ -46,7 +46,42 @@
             </ul>
         </div>
 
-    </div>
+    </div> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="flex-col items-center">
+          <div class="flex-col items-center my-1 mx-3 justify-center">
+              <a routerLink="/"><h1 class=" navbar-brand text-2xl font-mono mx-auto px-1">Gaston Rosales</h1></a>
+                <small class="font-mono text-lg mx-auto">Argentina Programa 2022 
+                    <fa-icon class="mx-auto" [icon]="terminalIco"></fa-icon>
+                </small>
+            </div>
+        </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav col align-items-center d-flex justify-content-end">
+                  <a class="nav-item nav-link active" routerLink="/">Inicio</a>
+                  <a class="nav-item nav-link" routerLink="/experiencia">Experiencia</a>
+                  <a class="nav-item nav-link" routerLink="/skills">Habilidades</a>
+                  <a class="nav-item nav-link" routerLink="/educacion">Educacion</a>
+                  <a class="nav-item nav-link" routerLink="/proyectos">Proyetos</a>
+                  <a class="nav-item nav-link" routerLink="/contacto" tabindex="-1">Contacto</a>
+                  <a *ngIf="!isLogged" routerLink="/login" class="">
+                    Iniciar Sesion
+                  </a>
+                  <a *ngIf="isLogged" (click)="logOut()"  class="">
+                    Cerrar Sesion
+                  </a>
+              </div>
+              <div class="navbar-nav ms-auto">
+              </div>
+          </div>
+      </div>
+  </nav>
 
 
 <router-outlet></router-outlet>
