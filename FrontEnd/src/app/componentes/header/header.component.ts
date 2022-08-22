@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   constructor( private personaService:PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona(2).subscribe({
+    this.personaService.getPersona(1).subscribe({
       next: (data:Persona) => 
       {
        this.persona = data;

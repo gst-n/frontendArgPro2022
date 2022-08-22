@@ -15,7 +15,7 @@ export class AcercaDeComponent implements OnInit {
 
   
     ngOnInit(): void {
-      this.personaService.getPersona(2).subscribe({
+      this.personaService.getPersona(1).subscribe({
          next: (data:Persona) => 
          {
           this.perfil = data;
