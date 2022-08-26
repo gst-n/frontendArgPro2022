@@ -4,6 +4,10 @@
             <div class="container border-2 shadow-lg bg-[#CEEFC1] border-black rounded-xl">
             <h1 class="text-4xl text-center mb-4 font-mono font-bold py-5">Proyectos personales</h1>
                 <div *ngFor="let proyecto of proyectos" class="container sm:flex justify-center mx-5">
+                    <div *ngIf="isLogged" class="flex px-2 w-2/4">
+                        <button (click)="borrar(proyecto.id)" ><fa-icon class="text-left" [icon]="deleteIcon">Eliminar</fa-icon></button>
+                        <button><fa-icon routerLink="/editProyecto/{{proyecto.id}}" class="mx-2" [icon]="editIcon">Editar</fa-icon></button>
+                    </div>
                     <div class="flex bg-[#FFFFD8] rounded-lg border-2 border-black m-10 font-mono font-bold text-lg text-center shadow-2xl w-2/3 h-2/6 hover:transition">
                         <div class="w-2/4 flex-col justify-center items-center my-auto mb-2">
                             <h2 class="">{{proyecto.nombre}}</h2>
@@ -14,24 +18,23 @@
                         <div class="w-2/4 text-center my-2 mx-2 ">
                             <small>
                                 {{proyecto.descripcion}}
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ut sit maiores illum mollitia soluta cum, eos pariatur necessitatibus.
                             </small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- BOTON PARA EDICION -->
+        
+        <button *ngIf="isLogged" (click)="toggleProyectoButton()"
+            class="h-fit py-3 items-center nav-item
+            flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF]
+            transition border-2 rounded-md border-black mt-1">Agregar nuevo Proyecto
+        </button>
+            <div *ngIf="addNuevoProyecto"   class="my-10">
+            <!-- NUEVA PROYECTO ACA -->
+            <app-nuevo-proyecto></app-nuevo-proyecto>
+        </div>
 </div>
 
-<!-- BOTON PARA EDICION -->
-
-            <button *ngIf="isLogged" (click)="toggleProyectoButton()"
-                class="h-fit py-3 items-center nav-item
-                flex justify-center font-mono hover:translate-x-1 hover:bg-[#9D94FF]
-              transition border-2 rounded-md border-black mt-1">Agregar nuevo Proyecto
-            </button>
-              <div *ngIf="addNuevoProyecto"   class="my-10">
-                <!-- NUEVA EDUCACION ACA -->
-                <app-nueva-educacion></app-nueva-educacion>
-            </div>
 <app-footer></app-footer>

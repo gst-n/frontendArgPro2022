@@ -10,6 +10,8 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { EditProyectosComponent } from './componentes/proyectos/edit-proyectos/edit-proyectos/edit-proyectos/edit-proyectos.component';
+import { NuevoProyectoComponent } from './componentes/proyectos/nueva-proyectos/nuevo-proyecto/nuevo-proyecto.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { EditSkillComponent } from './componentes/skills/edit-skill/edit-skill.component';
 import { NuevoSkillComponent } from './componentes/skills/nuevo-skill/nuevo-skill.component';
@@ -64,6 +66,15 @@ const routes: Routes = [
   {
     path: 'proyectos', 
     component: ProyectosComponent
+  },
+  {
+    path: 'nuevoProyecto',
+    component: NuevoProyectoComponent
+  },
+  {
+    path: 'editProyecto',
+    component: EditProyectosComponent,
+    canActivate: [GuardSeguridadGuard]
   },
   {
     path: 'footer', 
