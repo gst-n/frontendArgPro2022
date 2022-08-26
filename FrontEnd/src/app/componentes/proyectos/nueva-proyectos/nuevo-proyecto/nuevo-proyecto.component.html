@@ -1,0 +1,22 @@
+<div class="mb-5 list-none bg-[#CEEFC1] rounded-lg p-2 border-2 border-black">
+    <form (ngSubmit)="onCreate()" class="justify-center"  novalidate #f="ngForm">
+        <div class="">
+            <label class="font-mono" for="nombreE">Nombre del proyecto</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="nombreE" id="nombreE" [(ngModel)]="nombre" required>
+        </div>
+        <div>
+            <label class="font-mono" for="descripcionE">Descripcion</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="descripcionE" id="descripcionE" [(ngModel)]="descripcion" required>
+        </div>
+        <div>
+            <label class="font-mono" for="descripcionE">Imagen del Proyecto</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="imgUrl" id="imgUrl" [(ngModel)]="imgUrl" required>
+        </div>
+        <div>
+            <label class="font-mono" for="descripcionE">URL del Proyecto</label>
+            <input class="block w-full my-1  border border-black rounded-md" type="text" name="urlRepositorio" id="urlRepositorio" [(ngModel)]="urlRepositorio" required>
+        </div>
+        <button class="p-2 items-center font-mono hover:translate-x-1 hover:bg-[#9D94FF] transition border-2 rounded-md px-1 border-black mt-1">
+            Agregar Proyecto</button>
+    </form>
+</div>
