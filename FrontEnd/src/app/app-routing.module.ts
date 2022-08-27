@@ -72,7 +72,7 @@ const routes: Routes = [
     component: NuevoProyectoComponent
   },
   {
-    path: 'editProyecto',
+    path: 'editProyecto/:id',
     component: EditProyectosComponent,
     canActivate: [GuardSeguridadGuard]
   },
