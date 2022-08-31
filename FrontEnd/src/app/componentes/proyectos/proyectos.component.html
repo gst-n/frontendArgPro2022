@@ -9,7 +9,7 @@
                         <button><fa-icon routerLink="/editProyecto/{{proyecto.id}}" class="mx-2" [icon]="editIcon">Editar</fa-icon></button>
                     </div>
                     <div class="flex bg-[#FFFFD8] rounded-lg border-2 border-black m-10 font-mono font-bold text-lg text-center shadow-2xl w-2/3 h-2/6 hover:transition">
-                        <div class="w-2/4 flex-col justify-center items-center my-auto mx-auto">
+                        <div class="w-2/4 flex-col justify-center items-center my-auto mx-auto mb-3">
                             <h2 class="mb-2">{{proyecto.nombre}}</h2>
                             <a href="{{proyecto.urlRepositorio}}" target="_blank">
                             <img class="rounded-xl object-fill border-black border-2 mx-auto w-2/4 h-2/4" src="{{proyecto.imgUrl}}" alt="">
